@@ -11,9 +11,10 @@ def d_car() :  #длина машины
 area=float(input())
 useful_1=area//6.5
 useful_2=0
-for i in range(15):
-    car=d_car()
-    area=area-car-1.2
+car=d_car()
+while (area - 1.2) > car :
+    area=area - car - 1.2
     useful_2+=1
+    car=d_car()
 print(useful_1)
 print(useful_2,area)
